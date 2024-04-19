@@ -1,6 +1,6 @@
 build/truecolorTTY : truecolorTTY.c
 	mkdir -p build
-	gcc -lm truecolorTTY.c -o build/truecolorTTY `imlib2-config --cflags` `imlib2-config --libs`
+	gcc truecolorTTY.c -o build/truecolorTTY `pkg-config --cflags --libs imlib2 glib-2.0` -lm
 
 clear : 
 	rm -r build
